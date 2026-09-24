@@ -1,0 +1,13 @@
+PAINEL PASTORAL V11.1 — CENTRAL DE TREINAMENTOS
+Base: V11.0.
+
+NOVO MÓDULO TREINAMENTOS
+- Administrador cadastra vídeos do YouTube com título, categoria e descrição.
+- Miniatura automática e player dentro do Painel Pastoral.
+- Pastores assistem aos vídeos ativos.
+- Busca e filtro por categoria.
+- Administrador: Salvar, Editar, Excluir e Ativar/Inativar.
+- Dados persistidos no PostgreSQL/Neon e rotas protegidas por sessão.
+- Mantidas as funcionalidades anteriores.
+
+PUBLICAÇÃO: exatamente 7 arquivos na raiz, sem pastas. Não altere DATABASE_URL nem recrie o Neon.
