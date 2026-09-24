@@ -1,0 +1,20 @@
+PAINEL PASTORAL V11.7 — CORREÇÃO DO CRASH NO RAILWAY
+
+Base: V11.6.
+
+DIAGNÓSTICO
+As telas do Railway mostram que o Gunicorn inicia, mas o worker sai com código 3 e termina em “Worker failed to boot”.
+Na auditoria do app.py, o bloco db.create_all() estava posicionado antes de modelos adicionados nas versões recentes. Isso deixava as novas tabelas fora da inicialização correta.
+
+CORREÇÃO
+- Reordenada a inicialização do banco.
+- Todos os modelos, inclusive Solicitação de Materiais e Treinamentos, agora são declarados antes de db.create_all().
+- db.create_all() passa a criar/verificar as tabelas no PostgreSQL/Neon antes de o Flask atender as rotas.
+- app.py validado por compilação Python.
+- Mantido o player V11.6 e todos os módulos anteriores.
+- Não é necessário apagar nem recriar o banco Neon.
+
+PUBLICAÇÃO
+Substitua exatamente os 7 arquivos no GitHub, todos na raiz, sem pastas.
+Não altere DATABASE_URL.
+Após o deploy, confira se o Railway fica ACTIVE/Online. Se ainda ocorrer crash, envie as primeiras linhas do traceback imediatamente ACIMA de “Worker exiting”, pois elas mostram a exceção original.
