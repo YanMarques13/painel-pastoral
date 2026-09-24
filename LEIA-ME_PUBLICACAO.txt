@@ -1,0 +1,33 @@
+PAINEL PASTORAL V11.0 — SOLICITAÇÃO DE MATERIAIS
+
+Base: V10.4.
+
+NOVO MÓDULO — SOLICITAÇÃO DE MATERIAIS
+Canal de comunicação operacional entre Pastor Distrital e Administrador do Departamento de Mordomia Cristã.
+
+PASTOR
+- Nova solicitação.
+- Material, quantidade, igreja/destino, finalidade e observação ao administrador.
+- Acompanha status e mensagens do administrador.
+- Edita ou exclui enquanto a solicitação ainda está em Solicitação/Em análise.
+- Visualiza código/referência e informação de envio.
+
+ADMINISTRADOR
+- Visualiza solicitações do distrito selecionado.
+- Identifica pastor, distrito, igreja, material, quantidade e finalidade.
+- Atualiza status: Solicitado, Em análise, Separando, Enviado, Entregue ou Cancelado.
+- Informa mensagem ao pastor.
+- Informa código/referência de envio.
+- Registra automaticamente a data do envio quando o status passa para Enviado.
+
+SEGURANÇA
+- Rotas protegidas por sessão.
+- Pastor vê somente suas próprias solicitações.
+- Pastor não pode alterar o status administrativo.
+- Administrador gerencia o atendimento.
+- Dados persistidos no PostgreSQL/Neon.
+
+PUBLICAÇÃO
+Exatamente 7 arquivos na raiz, sem pastas.
+Substitua os 7 arquivos no GitHub e aguarde o deploy no Railway.
+Não altere DATABASE_URL e não recrie o banco Neon.
