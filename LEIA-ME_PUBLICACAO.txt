@@ -1,0 +1,20 @@
+PAINEL PASTORAL V11.5 — CORREÇÃO DEFINITIVA DO PLAYER YOUTUBE
+
+Base: V11.4.
+
+AUDITORIA/CORREÇÃO
+- Criado um player isolado dos modais antigos para eliminar conflitos de CSS/JavaScript.
+- Clique na miniatura ou em “Assistir” chama o novo player.
+- Player usa iframe oficial youtube.com/embed e abre em primeiro plano.
+- autoplay=1 após o clique explícito do usuário.
+- Compatível com youtube.com/watch, youtu.be, /shorts/, /embed/ e /live/.
+- Botão “Abrir diretamente no YouTube” permanece como alternativa quando o proprietário proíbe incorporação.
+- Fechar remove o src do iframe e interrompe o vídeo.
+- Mantidos cadastro, edição, exclusão, descrição, categorias e PostgreSQL/Neon.
+
+IMPORTANTE
+Alguns vídeos do YouTube têm incorporação desativada pelo proprietário. Nesses vídeos nenhum site externo pode reproduzir o conteúdo dentro de iframe; use “Abrir diretamente no YouTube”.
+
+PUBLICAÇÃO
+Substitua exatamente os 7 arquivos no GitHub, todos na raiz, sem pastas.
+Não altere DATABASE_URL nem recrie o Neon.
