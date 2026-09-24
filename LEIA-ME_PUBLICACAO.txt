@@ -1,0 +1,23 @@
+PAINEL PASTORAL V11.8 — CORREÇÃO DO BOOT NO RAILWAY
+
+Base: V11.7.
+
+CAUSA CONFIRMADA
+A V11.7 introduziu um erro de contexto Flask na inicialização do banco:
+RuntimeError: Working outside of application context.
+
+CORREÇÃO V11.8
+- Todos os modelos permanecem declarados antes da criação/verificação das tabelas.
+- Existe somente uma chamada db.create_all().
+- db.create_all() agora executa corretamente dentro de:
+  with app.app_context():
+      db.create_all()
+- O bloco fica antes das rotas Flask.
+- app.py validado por compilação Python.
+- Preservados Treinamentos, Solicitação de Materiais, player V11.6 e demais módulos.
+- Nenhuma alteração necessária no PostgreSQL/Neon.
+- Não altere DATABASE_URL.
+
+PUBLICAÇÃO
+Substitua exatamente os 7 arquivos no GitHub, todos na raiz e sem pastas.
+Aguarde o Railway concluir o deploy e confirme que o serviço fica Online/Active.
