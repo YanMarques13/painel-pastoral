@@ -1,0 +1,16 @@
+PAINEL PASTORAL V11.2 — CORREÇÃO CADASTRAR VÍDEO
+
+Base: V11.1.
+
+CORREÇÃO
+- Corrigido o botão “+ Cadastrar vídeo” que não abria o formulário.
+- Modal de cadastro agora abre explicitamente e fica acima das demais telas.
+- Corrigido fechamento/cancelamento do formulário.
+- Mantidos: título, categoria, URL do YouTube, descrição, Salvar, Editar, Excluir e Ativar/Inativar.
+- Mantido player do YouTube dentro do Painel.
+- Mantidas todas as funções da V11.0 e versões anteriores.
+- Dados continuam no PostgreSQL/Neon.
+
+PUBLICAÇÃO
+Substitua exatamente os 7 arquivos no GitHub. Sem pastas.
+Não altere DATABASE_URL nem recrie o Neon.
