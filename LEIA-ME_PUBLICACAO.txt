@@ -1,0 +1,32 @@
+PAINEL PASTORAL V9.1 — CORREÇÃO DE LOGIN / NEON
+
+IMPORTANTE: envie SOMENTE os arquivos deste pacote diretamente para a RAIZ do GitHub. Não crie pastas.
+
+Arquivos:
+- app.py
+- painel.html
+- requirements.txt
+- Procfile
+- runtime.txt
+- env_exemplo.txt
+- LEIA-ME_PUBLICACAO.txt
+
+No Railway configure:
+DATABASE_URL = connection string do Neon
+SECRET_KEY = sua chave secreta
+INITIAL_PASTOR_PASSWORD = 123456
+INITIAL_ADMIN_EMAIL = admin@painelpastoral.local
+INITIAL_ADMIN_PASSWORD = AdminPastoral2026!
+COOKIE_SECURE = 1
+
+No primeiro boot, o sistema cria a tabela de usuários e cadastra automaticamente os 34 pastores encontrados em painel.html, com senha armazenada em hash. Também cria o Administrador Geral.
+
+LOGIN DOS PASTORES:
+E-mail: e-mail cadastrado de cada pastor
+Senha inicial: 123456
+
+ADMINISTRADOR GERAL:
+E-mail: admin@painelpastoral.local
+Senha inicial: AdminPastoral2026!
+
+Depois do deploy, teste /health. Deve retornar status ok e usuarios 35.
