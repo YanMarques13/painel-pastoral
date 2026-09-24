@@ -1,0 +1,18 @@
+PAINEL PASTORAL — V9 PUBLICAÇÃO GITHUB + NEON
+
+ARQUIVOS: coloque TODOS diretamente na RAIZ do repositório GitHub. Não crie pastas.
+
+1. app.py — servidor Flask e persistência PostgreSQL
+2. painel.html — painel completo
+3. requirements.txt — dependências Python
+4. Procfile — comando de inicialização
+5. runtime.txt — versão Python
+6. env_exemplo.txt — nomes das variáveis (NÃO envie senhas reais ao GitHub)
+
+VARIÁVEIS NO RAILWAY:
+DATABASE_URL = connection string do Neon
+SECRET_KEY = chave longa e aleatória
+INITIAL_PASTOR_PASSWORD = senha inicial dos pastores
+COOKIE_SECURE = 1
+
+IMPORTANTE: nunca coloque DATABASE_URL real, senha do Neon ou SECRET_KEY dentro dos arquivos enviados ao GitHub.
