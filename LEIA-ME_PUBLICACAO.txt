@@ -1,0 +1,20 @@
+PAINEL PASTORAL V11.3 — AUDITORIA DO MÓDULO TREINAMENTOS
+
+Base: V11.2.
+
+CORREÇÕES DA AUDITORIA
+- Corrigido o botão Salvar vídeo com fluxo final independente de referências globais do navegador.
+- Validação de título e URL válida do YouTube antes do envio.
+- POST para novo vídeo e PUT para edição, com sessão autenticada.
+- Mensagem de erro do servidor agora é exibida ao administrador.
+- Estado “Salvando...” evita clique duplo.
+- Após salvar, o modal fecha e a biblioteca é recarregada.
+- Modal Cadastrar/Editar vídeo centralizado horizontal e verticalmente.
+- Responsividade corrigida para desktop e celular.
+- Player também centralizado.
+- Mantidos Editar, Excluir, Ativar/Inativar, categorias, busca e descrição.
+- Mantidos todos os módulos anteriores e persistência PostgreSQL/Neon.
+
+PUBLICAÇÃO
+Substitua exatamente os 7 arquivos no GitHub. Todos permanecem na raiz, sem pastas.
+Não altere DATABASE_URL e não recrie o banco Neon.
